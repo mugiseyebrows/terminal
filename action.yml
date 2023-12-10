@@ -1,0 +1,13 @@
+name: 'terminal'
+description: 'Get terminal session for runner'
+runs:
+  using: "composite"
+  steps:
+    - run: echo 1
+      shell: cmd
+    - run: dir
+      shell: cmd
+    - run: npm install request node-pty express express-ws 
+      shell: cmd
+    - run: node index.js
+      shell: cmd
