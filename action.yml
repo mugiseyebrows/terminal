@@ -3,6 +3,8 @@ description: 'Get terminal session for runner'
 runs:
   using: "composite"
   steps:
+    - name: checkout
+      uses: actions/checkout@v3
     - run: echo 1
       shell: cmd
     - run: dir
